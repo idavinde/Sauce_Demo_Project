@@ -33,6 +33,7 @@ jobs:
         
     - name: Running Test Automation Framework with Maven
       run: mvn test -X -Dbrowser=chrome -DisLambdaTest=true  -DisHeadless=false
+      working-directory: SD
 
 
     - name: Upload a Test logs
