@@ -5,7 +5,6 @@ ort# This workflow will build a Java project with Maven, and cache/restore any d
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
 # documentation.
-
 name: Test Automation WorkFlow
 
 on:
