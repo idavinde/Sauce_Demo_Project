@@ -10,7 +10,7 @@ import com.ui.pojo.User;
 @Listeners(com.ui.listeners.TestListner.class)
 public class LoginTest extends TestBase {
 
-	@Test(dataProviderClass = com.ui.dataProvider.LoginDataProvider.class, dataProvider = "JSONLoginDataProvider" )
+	@Test(dataProviderClass = com.ui.dataProvider.LoginDataProvider.class, dataProvider = "JSONLoginDataProvider") //jkhkhkjhlih
 	public void loginTest(User user) {
 
 	 assertEquals(login.loginWith(user.getUSERNAME(), user.getPASSWORD()).getTitle(), "Products", "Title is not matched test fail");
