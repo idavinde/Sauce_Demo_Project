@@ -37,12 +37,14 @@ jobs:
 
 
     - name: Upload a Test logs
+      if: always() 
       uses: actions/upload-artifact@v4.6.2
       with:
        name: Test logs
        path: logs/  
 
     - name: Upload a Test report
+      if: always() 
       uses: actions/upload-artifact@v4.6.2
       with:
        name: Test logs
