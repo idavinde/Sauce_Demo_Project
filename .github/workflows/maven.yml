@@ -1,4 +1,4 @@
-# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+ort# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
 
 # This workflow uses actions that are not certified by GitHub.
@@ -47,8 +47,8 @@ jobs:
       if: always() 
       uses: actions/upload-artifact@v4.6.2
       with:
-       name: Test logs
-       path: SD/report1.html
+       name: Test report
+       path: SD/report.html
 
     - name: Test Execution Status
       run: echo "Test Execution completed"
