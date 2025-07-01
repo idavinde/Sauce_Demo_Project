@@ -154,7 +154,7 @@ logger.info("Launching the browser: " + browsername.toString());
 		
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver.get();
 		Date date = new Date();
-		SimpleDateFormat format = new SimpleDateFormat();
+		SimpleDateFormat format = new SimpleDateFormat("MM-dd-yyyy_HH-mm-ss");
 		String timestamp = format.format(date);
 		File screenshotData =takesScreenshot.getScreenshotAs(OutputType.FILE);
 		String path = "./screenshots/"+ name+"-"+ timestamp+ ".png";
