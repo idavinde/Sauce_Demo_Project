@@ -59,7 +59,7 @@ jobs:
         mkdir -p public/extent-reports/
         cp -R SD/report.html public/extent-reports/
         cp -R SD/screenshots/ public/extent-reports/screenshots/
-        ls-l
+        ls -l
 
     - name: Deploy
       if: always()
