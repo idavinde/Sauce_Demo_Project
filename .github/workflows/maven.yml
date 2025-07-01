@@ -35,6 +35,13 @@ jobs:
        name: Test logs
        path: SD/logs/  
 
+    - name: Upload a Screenshot 
+      if: always() 
+      uses: actions/upload-artifact@v4.6.2
+      with:
+       name: Screenshots
+       path: SD/screenshots/ 
+       
     - name: Upload a Test report
       if: always() 
       uses: actions/upload-artifact@v4.6.2
