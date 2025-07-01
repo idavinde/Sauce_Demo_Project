@@ -3,6 +3,7 @@ package com.utility;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
@@ -17,6 +18,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.constants.Browsers;
 
@@ -107,6 +110,11 @@ logger.info("Launching the browser: " + browsername.toString());
 		
 		
 	}
+	
+	public void explicitWait(WebDriver driver, By locator) {
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));	}
 
 	public void goToWebSite(String URL) {
 		logger.info("Visiting the Website: " + URL);
@@ -120,16 +128,20 @@ logger.info("Launching the browser: " + browsername.toString());
 
 	public void clickOn(By locator) {
 		logger.info("Performing click Operation on" +locator);
+		explicitWait(driver.get(),locator);
 		driver.get().findElement(locator).click();
 	}
 
 	public void enterText(By locator, String text) {
 		logger.info("Find the Element using locator: " + locator +" and Enter the text "+text);
+		
+		explicitWait(driver.get(),locator);
 		driver.get().findElement(locator).sendKeys(text);
 	}
 	
 	public String getVisibleText(By locator) {
 		logger.info("Find the Element using locator: " + locator +" and Get the text");
+		explicitWait(driver.get(),locator);
 		return driver.get().findElement(locator).getText();
 	}
 	
