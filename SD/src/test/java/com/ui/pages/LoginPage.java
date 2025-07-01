@@ -15,7 +15,8 @@ public final class LoginPage extends BrowserUtility {
 	Logger logger = LoggerUtility.getLog(this.getClass());
 	
 	public LoginPage(WebDriver driver) {
-		super(driver);		
+		super(driver);
+		goToWebSite(JSONEnvirUtility.readConfigJason(Envir.QA).getURL());
 	}
 	
 	public LoginPage(Browsers browsername,boolean isHeadless) {
@@ -24,7 +25,7 @@ public final class LoginPage extends BrowserUtility {
 		goToWebSite(JSONEnvirUtility.readConfigJason(Envir.QA).getURL());
 	}
 	
-	private static final By USERNAME= By.id("user-name");
+	private static final By USERNAME= By.xpath("//input[@id=\"user-name\"]");
 	private static final By PASSWORD = By.id("password");
 	private static final By LOGIN_BUTTON = By.id("login-button");
 	
