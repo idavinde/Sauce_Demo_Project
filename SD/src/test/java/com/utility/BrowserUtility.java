@@ -157,7 +157,7 @@ logger.info("Launching the browser: " + browsername.toString());
 		SimpleDateFormat format = new SimpleDateFormat();
 		String timestamp = format.format(date);
 		File screenshotData =takesScreenshot.getScreenshotAs(OutputType.FILE);
-		String path = "./screenShot/"+ name+"-"+ timestamp+ ".png";
+		String path = "./screenshots/"+ name+"-"+ timestamp+ ".png";
 		File screenshotFile = new File(path);
 		
 		try {
