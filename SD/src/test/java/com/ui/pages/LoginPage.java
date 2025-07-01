@@ -36,7 +36,7 @@ public final class LoginPage extends BrowserUtility {
 		enterText(PASSWORD, password);
 		clickOn(LOGIN_BUTTON);
 		
-		return new ProductPage(getDriver());
+		return new ProductPage(getDriver());  
 		
 	}
 	
